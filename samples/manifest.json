@@ -1,0 +1,241 @@
+[
+  {
+    "id": "mercedes",
+    "family": "mercedes",
+    "title": "벤츠 · 고차원 데이터",
+    "description": "익명화된 변수 378개와 연속형 타깃 y. ID는 관계 분석에서 제외합니다.",
+    "sourceUrl": "https://www.kaggle.com/c/mercedes-benz-greener-manufacturing",
+    "licenseStatus": "공개 재배포 권한 미확인 · 개인·수업용 비공개 사용",
+    "attribution": "사용자가 제공한 benz_train.csv. y의 단위와 X 변수의 실제 의미는 미확인.",
+    "files": [
+      {
+        "sourcePath": "작업/benz/benz_train.csv",
+        "storageKey": "seeds/mercedes/6d6016d51b25bf4b112640786f85f41e88c3740baf82663d636a237f8965ea8f/benz_train.csv",
+        "sha256": "6d6016d51b25bf4b112640786f85f41e88c3740baf82663d636a237f8965ea8f",
+        "bytes": 3220873
+      }
+    ],
+    "expectedRows": 4209,
+    "expectedColumns": 378,
+    "parser": {
+      "delimiter": ",",
+      "header": true,
+      "missingTokens": [
+        "",
+        "NA",
+        "N/A",
+        "NULL",
+        "NaN"
+      ]
+    },
+    "columnRoles": {
+      "ID": "identifier"
+    },
+    "defaultTargets": [
+      "y"
+    ],
+    "defaultGroup": "X0",
+    "adapterVersion": "1.0.0"
+  },
+  {
+    "id": "naval",
+    "family": "naval",
+    "title": "해군함정 · 상태계수 분석",
+    "description": "정상상태 시뮬레이션. 선속 조건 보정과 두 상태계수를 비교합니다.",
+    "sourceUrl": "https://archive.ics.uci.edu/dataset/316/condition+based+maintenance+of+naval+propulsion+plants",
+    "licenseStatus": "동봉 README: 상업적 이용 금지 · 논문 인용 필요",
+    "attribution": "Coraddu et al., Machine Learning Approaches for Improving Condition-Based Maintenance of Naval Propulsion Plants, 2014, DOI 10.1177/1475090214540874. 단위는 cbm_Features.txt를 보존.",
+    "files": [
+      {
+        "sourcePath": "작업/Condition Based Maintenance of Naval Propulsion Plants_UCI/UCI CBM Dataset/cbm_data.csv",
+        "storageKey": "seeds/naval/de0ea69da1efaab8b9655ffed828547d10dd68c1fb8c6e0163e6a988def393a6/cbm_data.csv",
+        "sha256": "de0ea69da1efaab8b9655ffed828547d10dd68c1fb8c6e0163e6a988def393a6",
+        "bytes": 3448926
+      },
+      {
+        "sourcePath": "작업/Condition Based Maintenance of Naval Propulsion Plants_UCI/UCI CBM Dataset/cbm_Features.txt",
+        "storageKey": "seeds/naval/3318e98f507c3bba7ba674d341bcda679c7634027e691c1fe3a43fa3e18b17ae/cbm_Features.txt",
+        "sha256": "3318e98f507c3bba7ba674d341bcda679c7634027e691c1fe3a43fa3e18b17ae",
+        "bytes": 758
+      },
+      {
+        "sourcePath": "작업/Condition Based Maintenance of Naval Propulsion Plants_UCI/UCI CBM Dataset/cbm_README.txt",
+        "storageKey": "seeds/naval/1ea823d918fed1225329563244e8b0d804912dea4af7a3dad7b0c6caa7356b6b/cbm_README.txt",
+        "sha256": "1ea823d918fed1225329563244e8b0d804912dea4af7a3dad7b0c6caa7356b6b",
+        "bytes": 5366
+      }
+    ],
+    "expectedRows": 11934,
+    "expectedColumns": 18,
+    "parser": {
+      "delimiter": "whitespace",
+      "header": false,
+      "missingTokens": [
+        "",
+        "NA",
+        "N/A",
+        "NULL",
+        "NaN"
+      ],
+      "columnNames": [
+        "lp",
+        "v",
+        "GTT",
+        "GTn",
+        "GGn",
+        "Ts",
+        "Tp",
+        "T48",
+        "T1",
+        "T2",
+        "P48",
+        "P1",
+        "P2",
+        "Pexh",
+        "TIC",
+        "mf",
+        "compressor_decay",
+        "turbine_decay"
+      ]
+    },
+    "columnRoles": {},
+    "defaultTargets": [
+      "compressor_decay",
+      "turbine_decay"
+    ],
+    "defaultGroup": "v",
+    "adapterVersion": "1.0.0"
+  },
+  {
+    "id": "wine-red",
+    "family": "wine",
+    "title": "와인 · 레드",
+    "description": "11개 이화학 특성과 순서형 품질 점수. 원본·중복 제거 결과를 비교합니다.",
+    "sourceUrl": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+    "licenseStatus": "연구용 공개 자료 · 동봉 winequality.names의 인용 요구 준수",
+    "attribution": "Cortez et al. (2009), Modeling wine preferences by data mining from physicochemical properties. Decision Support Systems 47(4):547–553.",
+    "files": [
+      {
+        "sourcePath": "작업/wine+quality/winequality-red.csv",
+        "storageKey": "seeds/wine-red/4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e/winequality-red.csv",
+        "sha256": "4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e",
+        "bytes": 84199
+      },
+      {
+        "sourcePath": "작업/wine+quality/winequality.names",
+        "storageKey": "seeds/wine-red/15d215e73b39105952380fd487e4ce1bf5a6b83a425abb285c2ec55193d3ca92/winequality.names",
+        "sha256": "15d215e73b39105952380fd487e4ce1bf5a6b83a425abb285c2ec55193d3ca92",
+        "bytes": 3305
+      }
+    ],
+    "expectedRows": 1599,
+    "expectedColumns": 12,
+    "parser": {
+      "delimiter": ";",
+      "header": true,
+      "missingTokens": [
+        "",
+        "NA",
+        "N/A",
+        "NULL",
+        "NaN"
+      ]
+    },
+    "columnRoles": {},
+    "defaultTargets": [
+      "quality"
+    ],
+    "defaultGroup": null,
+    "adapterVersion": "1.0.0"
+  },
+  {
+    "id": "wine-white",
+    "family": "wine",
+    "title": "와인 · 화이트",
+    "description": "11개 이화학 특성과 순서형 품질 점수. 원본·중복 제거 결과를 비교합니다.",
+    "sourceUrl": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+    "licenseStatus": "연구용 공개 자료 · 동봉 winequality.names의 인용 요구 준수",
+    "attribution": "Cortez et al. (2009), Modeling wine preferences by data mining from physicochemical properties. Decision Support Systems 47(4):547–553.",
+    "files": [
+      {
+        "sourcePath": "작업/wine+quality/winequality-white.csv",
+        "storageKey": "seeds/wine-white/76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836/winequality-white.csv",
+        "sha256": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836",
+        "bytes": 264426
+      },
+      {
+        "sourcePath": "작업/wine+quality/winequality.names",
+        "storageKey": "seeds/wine-white/15d215e73b39105952380fd487e4ce1bf5a6b83a425abb285c2ec55193d3ca92/winequality.names",
+        "sha256": "15d215e73b39105952380fd487e4ce1bf5a6b83a425abb285c2ec55193d3ca92",
+        "bytes": 3305
+      }
+    ],
+    "expectedRows": 4898,
+    "expectedColumns": 12,
+    "parser": {
+      "delimiter": ";",
+      "header": true,
+      "missingTokens": [
+        "",
+        "NA",
+        "N/A",
+        "NULL",
+        "NaN"
+      ]
+    },
+    "columnRoles": {},
+    "defaultTargets": [
+      "quality"
+    ],
+    "defaultGroup": null,
+    "adapterVersion": "1.0.0"
+  },
+  {
+    "id": "wine-combined",
+    "family": "wine",
+    "title": "와인 · 종류별 통합",
+    "description": "11개 이화학 특성과 순서형 품질 점수. 원본·중복 제거 결과를 비교합니다.",
+    "sourceUrl": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+    "licenseStatus": "연구용 공개 자료 · 동봉 winequality.names의 인용 요구 준수",
+    "attribution": "Cortez et al. (2009), Modeling wine preferences by data mining from physicochemical properties. Decision Support Systems 47(4):547–553.",
+    "files": [
+      {
+        "sourcePath": "작업/wine+quality/winequality-red.csv",
+        "storageKey": "seeds/wine-combined/4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e/winequality-red.csv",
+        "sha256": "4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e",
+        "bytes": 84199
+      },
+      {
+        "sourcePath": "작업/wine+quality/winequality-white.csv",
+        "storageKey": "seeds/wine-combined/76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836/winequality-white.csv",
+        "sha256": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836",
+        "bytes": 264426
+      },
+      {
+        "sourcePath": "작업/wine+quality/winequality.names",
+        "storageKey": "seeds/wine-combined/15d215e73b39105952380fd487e4ce1bf5a6b83a425abb285c2ec55193d3ca92/winequality.names",
+        "sha256": "15d215e73b39105952380fd487e4ce1bf5a6b83a425abb285c2ec55193d3ca92",
+        "bytes": 3305
+      }
+    ],
+    "expectedRows": 6497,
+    "expectedColumns": 13,
+    "parser": {
+      "delimiter": ";",
+      "header": true,
+      "missingTokens": [
+        "",
+        "NA",
+        "N/A",
+        "NULL",
+        "NaN"
+      ]
+    },
+    "columnRoles": {},
+    "defaultTargets": [
+      "quality"
+    ],
+    "defaultGroup": "wine_type",
+    "adapterVersion": "1.0.0"
+  }
+]

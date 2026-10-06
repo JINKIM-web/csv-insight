@@ -1,0 +1,2 @@
+import {config} from 'dotenv';config({path:'.env.local'});config();import {neon} from '@neondatabase/serverless';import {readFile} from 'node:fs/promises';
+if(!process.env.DATABASE_MIGRATION_URL)throw Error('DATABASE_MIGRATION_URL을 서버 환경에 설정하세요.');const sql=neon(process.env.DATABASE_MIGRATION_URL);const statements=(await readFile('drizzle/0001_init.sql','utf8')).split(';').map(x=>x.trim()).filter(Boolean);await sql.transaction(statements.map(statement=>sql.query(statement)));console.log('Neon 초기 migration 완료.');
